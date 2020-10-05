@@ -49,5 +49,5 @@ module.exports.run = async (client, message, args) => {
 }
   module.exports.help = {
     name: 'ui',
-    aliases: ['userinfo'],
+    Aliases: ['userinfo'],
   }
