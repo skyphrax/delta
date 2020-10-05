@@ -20,6 +20,8 @@ module.exports.run = async (bot, message, args) => {
    .addField("User kicked", `${kickedUser} (ID: ${kickedUser.id})`)
    .addField("Canal", message.channel)
    .addField("Raison", kickReason)
+   . setTimestamp ( )
+    . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
  
    message.channel.send({ embed: kickEmbed })
    message.guild.member(kickedUser).kick(kickReason);
