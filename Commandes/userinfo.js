@@ -5,6 +5,7 @@ const colours = require("../colours.json")
 module.exports.run = async (client, message, args) => {
     if (!message.guild)
     return message.channel.send("Une erreur s'est produite !");
+    const user_mention = message.mentions.users.first();
     const statusgame = {
         null: ":x: Aucun jeu"
       }
@@ -17,24 +18,24 @@ module.exports.run = async (client, message, args) => {
       }
        var e = new Discord.MessageEmbed()
          .setThumbnail(message.author.displayAvatarURL)
-       .setDescription(`**:bust_in_silhouette: Informations de l'utilisateur de  ${message.author.username} :**`)
-         .addField("**:star:  | Pseudo :**", `**${message.author.username}**`)
+       .setDescription(`**:bust_in_silhouette: Informations de l'utilisateur de  ${user_mention.tag} :**`)
+         .addField("**:star:  | Pseudo :**", `**${user_mention.username}**`)
          .addField(
            "**:beginner:   | Discriminateur :**",
-           ` **#${message.author.discriminator}**`
+           ` **#${user_mention.discriminator}**`
          )
          .addField(
            "**:date:   | Création du compte :**",
-           ` **${message.author.createdAt}**`
+           ` **$${user_mention.createdAt}**`
          )
          .addField("**:id:   | Identifiant :**", ` **${message.author.id}**`)
          .addField(
            "**:video_game:   | Jeu :**",
-           ` **${statusgame[message.author.presence.game]}**`
+           ` **${statusgame[user_mention.presence.game]}**`
          )
          .addField(
            "**:computer:   | Status :**",
-           ` **${status[message.author.presence.status]}**`
+           ` **${status[user_mention.presence.status]}**`
          )
        .addField("**:busts_in_silhouette: | Aliases :**", "`userinfo` & `ui`")
    .setFooter(`${client.user.username} © 2020`)
