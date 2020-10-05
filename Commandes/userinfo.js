@@ -5,7 +5,7 @@ const colours = require("../colours.json")
 module.exports.run = async (client, message, args) => {
     if (!message.guild)
     return message.channel.send("Une erreur s'est produite !");
-    return message.reply("Syntaxe: d!say <entrer le message que vous allez envoyer>");
+    return message.reply("Syntaxe: d!say <entrer l'utilisateur mentionnnez>");
     const user_mention = message.mentions.users.first();
     const statusgame = {
         null: ":x: Aucun jeu"
