@@ -21,6 +21,8 @@ module.exports.run = async (bot, message, args) => {
    .addField("Autor of ban", `${message.author} (ID: ${message.author.id})`)
    .addField("Canal", message.channel)
    .addField("Raison", banReason)
+   . setTimestamp ( )
+    . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
 
    message.channel.send({ embed: banEmbed })
  
