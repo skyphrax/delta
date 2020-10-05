@@ -13,9 +13,9 @@ module.exports.run = (client, message, args) => {
         .addField(":film_frames: • __Fun__", "`dog`, `cat`, `8ball`")
         .setThumbnail(client.user.displayAvatarURL())
         .setColor("#282830");
-    . setTimestamp ( )
-    . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
-    message.channel.send({ embed: help })
+        .setTimestamp()
+        .setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
+         message.channel.send({ embed: help })
 }
 
 module.exports.help = {
