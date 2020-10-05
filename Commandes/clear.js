@@ -5,8 +5,6 @@ module.exports.run = async (bot, message, args) => {
  
     if(!message.member.hasPermission("MANAGE_MESSAGES"))
     return message.reply(":x:  Vous n'avez pas la permission.");
-    if(!args[0])
-    return message.reply("Syntaxe: d!clear <entrer le nombre à supprimer>");
  
     message.channel.bulkDelete(args[0]).then(() => {
         
