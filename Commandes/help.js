@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const {PREFIX} = require("../config.js");
-const
+const colours = require("../colours.json")
+
 module.exports.run = (client, message, args) => {
     var help = new Discord.MessageEmbed()
         .setColor(colours.red_light)
