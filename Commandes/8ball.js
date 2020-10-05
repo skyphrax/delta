@@ -14,8 +14,10 @@ module.exports.run = async (client, message, args) => {
   let embed = new Discord.MessageEmbed()
     .setAuthor(message.author.username, message.author.displayAvatarURL())
     .setColor(colours.red_light)
+    .addField("Question:", question)
     .setThumbnail(
       "https://e7.pngegg.com/pngimages/260/536/png-clipart-magic-8-ball-billiards-eight-ball-pool-billiard-balls-billiards.png"
+    .addField("Réponse: ", replies[reponse])
     )
    . setTimestamp ( )
     . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
