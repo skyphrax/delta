@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-const {TOKEN, PREFIX} = require("./config.js");
+const {PREFIX} = require("./config.js");
 const colours = require("./colours.json");
 const db = require('quick.db')
-client.login(TOKEN);
+client.login(process.env.TOKEN);
 
 client.commands = new Discord.Collection();
 fs.readdir("./Commandes/", (error, f) => {
