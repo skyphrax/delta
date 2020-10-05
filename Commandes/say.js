@@ -4,7 +4,8 @@ const colours = require("../colours.json")
 
 module.exports.run = async (client, message, args) => {
     if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send("Vous n'avez pas la permissions pour faire cette commande !");
-    message.reply("Syntaxe: d!say <entrer le nombre à supprimer>");
+    if(!args[0])
+    return message.reply("Syntaxe: d!say <entrer le nombre à supprimer>");
     message.delete().catch;
     let a = new Discord.MessageEmbed()
     .setColor(colours.red_light)
