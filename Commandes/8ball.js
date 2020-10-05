@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
     .setColor(colours.red_light)
     .setThumbnail(
       "https://e7.pngegg.com/pngimages/260/536/png-clipart-magic-8-ball-billiards-eight-ball-pool-billiard-balls-billiards.png"
-    .addField(question, replies[reponse])
+    .addField(question, replies[response]);
     )
    . setTimestamp ( )
     . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
