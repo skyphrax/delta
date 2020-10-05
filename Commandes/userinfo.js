@@ -41,8 +41,6 @@ module.exports.run = async (client, message, args) => {
        .addField("**:busts_in_silhouette: | Aliases :**", "`userinfo` & `ui`")
    .setFooter(`${client.user.username} © 2020`)
    .setColor("GREEN")
-         .setTimestamp()
-    . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
        
        message.channel.send(e);
        message.react(":heavy_check_mark:");
