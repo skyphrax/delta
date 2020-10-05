@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const {PREFIX} = require("../config.js");
-
+const
 module.exports.run = (client, message, args) => {
     var help = new Discord.MessageEmbed()
-        .setColor("RANDOM")
+        .setColor(colours.red_light)
         .setTitle(":globe_with_meridians: • Listes des commandes disponibles :")
         .addField(":zap: • __Administration__", "`say`, `annonce`, `setwelcome`, `setleave`")
         .addField(":warning: • __Modération__", "`ban`, `kick`, `clear`, `tempmute`, `dm`")
