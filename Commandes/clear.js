@@ -2,10 +2,10 @@ const Discord = require("discord.js");
 const colours = require("../colours.json");
  
 module.exports.run = async (bot, message, args) => {
- 
+    
     if(!message.member.hasPermission("MANAGE_MESSAGES"))
     return message.reply(":x:  Vous n'avez pas la permission.");
- 
+    message.delete();
     message.channel.bulkDelete(args[0]).then(() => {
         
         let clearEmbed = new Discord.MessageEmbed()
