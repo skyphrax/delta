@@ -1,7 +1,7 @@
 const Discord= require('discord.js')
 module.exports = (client, guild) => {
     
-    const channel = client.channels.cache.get("762692633231097866") //channel où le message sera mis
+    const channel = client.channels.cache.get("762692633231097866")
     //console.log(channel)
     let addembed = new Discord.MessageEmbed()
         .setTitle(`BOT vient d'être ajouté sur le serveur : ${guild.name}`)
