@@ -13,8 +13,8 @@ module.exports.run = async (bot, message, args) => {
         let clearEmbed = new Discord.MessageEmbed()
         .setColor(colours.red_light)
         .addField("Vous avez supprimer ", `${args[0]} message(s)`)
-        . setTimestamp ( )
-    . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
+        .setTimestamp ( )
+        .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020`, client.user.displayAvatarURL)
 
         message.channel.send(clearEmbed).then(async msg => {
             msg.delete({timeout: 5000})
