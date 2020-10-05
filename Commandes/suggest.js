@@ -15,6 +15,7 @@ module.exports.run = (client, message, args) => {
     .setColor("#ff2050")
     .setDescription(args.join(" "))
     .setTimestamp()
+    . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
     
     
     message.channel.send(embed).then(m => {
