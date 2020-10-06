@@ -5,6 +5,6 @@ module.exports = async (client, guild) => {
   createdChannel.overwritePermissions([
     {
       id: guild.id,
-      deny: ['VIEW_CHANNEL']
+      deny: ['VIEW_CHANNEL'],
     }
 ], "Création du salon log et fermeture de l'accès au public")
