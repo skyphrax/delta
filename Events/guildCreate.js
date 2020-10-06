@@ -1,5 +1,10 @@
 const Discord = require('discord.js');
 
 module.exports = async (client, guild) => {
-  guild.channels.create("Delta-Log", {type: "text"}, guild.lockPermissions(true))
+  let createdChannel = await guild.channels.create("Delta-Log", {type: "text"})  
+  createdChannel.overwritePermissions([
+    {
+      allow: ['VIEW_CHANNEL'],
+      deny: []
+  ])
 }
