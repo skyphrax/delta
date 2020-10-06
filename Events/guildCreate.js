@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports = async (client, guild) => {
-  message.channel.send("Se salon est pour la config du bot");
+  client.message.channel.send("Se salon est pour la config du bot");
   let createdChannel = await guild.channels.create("Delta-Log", {type: "text"})
   createdChannel.overwritePermissions([
     {
