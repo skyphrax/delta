@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const colours = require("../colours.json");
  
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
  
    let bannedUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
    if(!bannedUser) {
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
    .addField("Canal", message.channel)
    .addField("Raison", banReason)
    . setTimestamp ( )
-    . setFooter ( `Tout droit résérvé | DeltaBot © ️ 2020` ,  client . user . displayAvatarURL )
+    .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
 
    message.channel.send({ embed: banEmbed })
  
