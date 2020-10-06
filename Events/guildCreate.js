@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const colours = require("../colours.json")
 
 module.exports = async (client, guild) => {
   let createdChannel = await guild.channels.create("Delta-Log", {type: "text"})
