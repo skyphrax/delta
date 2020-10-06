@@ -4,6 +4,8 @@ const colours = require("../colours.json")
 
 module.exports.run = async (client, message, args) => {
     if(!message.member.hasPermission("MANAGE_ROLES") || !message.guild.owner) return message.channel.send("Vous n'avez pas la permissions pour faire cette commande !");
+    if(!args[0])
+    return message.reply("Syntaxe: d!sondage <la question que vous voulez poser");
     message.delete().catch;
     let embed = new Discord.MessageEmbed()
     .setAuthor(message.author.username, message.author.displayAvatarURL())
