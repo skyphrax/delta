@@ -1,14 +1,15 @@
 const Discord = require('discord.js');
+const colours = require("../colours.json")
 
 module.exports = async (client, guild) => {
   let createdChannel = await guild.channels.create("Delta-Log", {type: "text"})
-  createdChannel.send({
-	  const exampleEmbed = new Discord.MessageEmbed()
-	.setColor('#0099ff')
-	.setTitle('test')
-	  
-	channel.send(exampleEmbed);
-  })
+  let embed = new Discord.MessageEmbed()
+  	.setcolor(colours.red_light)
+	.setDescription("Se salon a été créer pour config le bot")
+  	.setTimestamp()
+  	.setFooter(`Tout droit résérvé | DeltaBot ©️ 2020`, client.user.displayAvatarURL)
+
+	createdChannel.send(embed)
   
   
   createdChannel.overwritePermissions([
