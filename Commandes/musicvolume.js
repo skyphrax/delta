@@ -15,3 +15,7 @@ module.exports.run = async (client, message, args) => {
   } else {
     message.channel.send(`Le volume est actuellement: ${musicPlayer.volume}.`);
 }
+  
+module.exports.help = {
+    name: "volume"
+}
