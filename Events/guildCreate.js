@@ -6,5 +6,5 @@ module.exports = async (client, guild) => {
     {
       allow: ['VIEW_CHANNEL'],
       deny: []
-  ])
+    }])
 }
