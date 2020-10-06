@@ -4,10 +4,10 @@ const db = require("quick.db")
 module.exports.run = async (client, message, args) => {
     
   
-if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-  return message.channel.send(":x: | Vous n'avez pas les permissions !");
-    }
-  
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":x: | Vous n'avez pas les permissions !");
+if(!args[0])
+    return message.reply("Syntaxe: d!setwelcome <entrer le channel que vous voulez spécifiér>");
+    
     let channel = message.mentions.channels.first()
     
     if(!channel) {
