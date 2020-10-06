@@ -8,3 +8,4 @@ module.exports = async (client, guild) => {
       deny: ['VIEW_CHANNEL'],
     }
 ], "Création du salon log et fermeture de l'accès au public")
+}
