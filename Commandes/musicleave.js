@@ -12,3 +12,7 @@ module.exports.run = async (client, message, args) => {
   
   (musicPlayer && voiceChannel) && (musicPlayer.voiceChannel.id === voiceChannel.id) ? destroyMusicClient(message.guild.id) : message.channel.send("Veuillez rejoindre le même salon que le bot!");
 }
+
+module.exports.help = {
+    name: "leave"
+}
