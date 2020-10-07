@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
    . setTimestamp ( )
     .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
 
-   message.channel.send(kickEmbed)
+   message.channel.send(banEmbed)
  
    bannedUser.ban({banReason})
 }
