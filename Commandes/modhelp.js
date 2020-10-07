@@ -9,11 +9,11 @@ if(!perm) return message.channel.send("Tu n'as pas la permission de taper cette 
       .setURL("https://discord.gg/pJnP2pP")
       .setThumbnail(client.user.displayAvatarURL())
       .setImage(client.user.displayAvatarURL())
-      .addField("d!kick & d!kickhelp", "`Sert a kick une personne`")
-      .addField("d!ban & d!banhelp", "`Sert a ban une personne`")
-      .addField("d!dm & d!dmhelp", "`Sert a convoqué une personne`")
-      .addField("d!tempmute & d!mutehelp", "`Sert a mute une personne`")
-      .addField("d!clear & d!clearhelp", "`Sert a clear des messages`")
+      .addField("d!kick", "`Sert a kick une personne`")
+      .addField("d!ban", "`Sert a ban une personne`")
+      .addField("d!dm", "`Sert a convoqué une personne`")
+      .addField("d!tempmute", "`Sert a mute une personne`")
+      .addField("d!clear", "`Sert a clear des messages`")
 
 
 .setTimestamp()
