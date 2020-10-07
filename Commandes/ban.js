@@ -8,8 +8,8 @@ module.exports.run = async (client, message, args) => {
        let helpembed = new Discord.MessageEmbed()
    .setDescription("~Ban~")
    .setColor(colours.red_light)
-   .addField("Mentionnez l'utilisateur ```exemple: d!ban @steve ...```")
-   .addField("La raison ```exemple:d!ban @... menace de ddos```")
+   .addField("Mentionnez l'utilisateur", "````exemple: d!ban @steve ...````")
+   .addField("La raison", "````exemple:d!ban @... menace de ddos````")
     .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
     message.channel.send(helpembed)
    }
