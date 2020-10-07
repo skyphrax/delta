@@ -15,7 +15,6 @@ module.exports.run = async (bot, message, args) => {
    .addField("Mentionnez l'utilisateur", "```exemple: d!tempmute @steve ...```")
    .addField("La durée", "```exemple:d!tempmute @... number(s=second,d=days,y=years)```")
    .addField("La raison", "```exemple:d!tempmute @... ...d Raconte des choses racistes```")
-   .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
     message.channel.send({ embed: helpembed })
     }
     let reason = args.slice(2).join(" ");
