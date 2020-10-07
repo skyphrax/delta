@@ -1,0 +1,10 @@
+{
+  "languages": ["english", "french", "spanish"],
+  "translation": {
+    "THE_SUM_IS": {
+      "english": "The sum is",
+      "french": "la somme est",
+      "spanish": "La suma es"
+    }
+  }
+}
