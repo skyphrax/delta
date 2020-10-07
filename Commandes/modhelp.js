@@ -1,5 +1,5 @@
 const Discord = require ("discord.js");
-const colors = require ("../ colours.json");
+const colours = require ("../ colours.json");
 
 module.exports.run = (client,message, args) => {
   let perm = message.member.hasPermission('MANAGE_MESSAGES')
