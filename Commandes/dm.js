@@ -12,7 +12,7 @@ const guild = message.guild;
 if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('Vous n\'avez pas la permission d\'utiliser cette commande.')
 if (!desti) {
     let helpembed = new Discord.MessageEmbed()
-   .setDescription("~Tempmute~")
+   .setDescription("~DM~")
    .setColor(colours.red_light)
    .addField("Mentionnez l'utilisateur", "```exemple: d!dm @steve ...```")
    .addField("La raison", "```exemple:d!dm @... allé dans attente recrutement```")
