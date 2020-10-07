@@ -1,8 +1,11 @@
+const Discord = require ("discord.js");
+const colors = require ("../ colours.json");
+
 module.exports.run = (client,message, args) => {
   let perm = message.member.hasPermission('MANAGE_MESSAGES')
 if(!perm) return message.channel.send("Tu n'as pas la permission de taper cette commande!")
-  const embed = new MessageEmbed()
-      .setColor("#dc143c") 
+  const embed = new Discord.MessageEmbed()
+      .setColor(colours.red_light) 
       .setTitle("Liste des commandes de modérations")
       .setURL("https://discord.gg/pJnP2pP")
       .setDescription("Annonce à l'attention de tout le monde")
