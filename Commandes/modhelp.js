@@ -5,7 +5,7 @@ module.exports.run = (client,message, args) => {
 if(!perm) return message.channel.send("Tu n'as pas la permission de taper cette commande!")
   const embed = new Discord.MessageEmbed()
       .setColor("#f94343") 
-      .setTitle("Liste des commandes de modérations")
+      .setTitle("Liste de commandes de modérations")
       .setURL("https://discord.gg/pJnP2pP")
       .setThumbnail(client.user.displayAvatarURL())
       .setImage(client.user.displayAvatarURL())
