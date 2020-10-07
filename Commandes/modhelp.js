@@ -7,14 +7,13 @@ if(!perm) return message.channel.send("Tu n'as pas la permission de taper cette 
       .setColor("#f94343") 
       .setTitle("Liste des commandes de modérations")
       .setURL("https://discord.gg/pJnP2pP")
-      .setDescription("Annonce à l'attention de tout le monde")
       .setThumbnail(client.user.displayAvatarURL())
       .setImage(client.user.displayAvatarURL())
-      .addField("Quel est ce bot?","Ce bot est le bot qui sera rendu public lors de la fin de son developpement.")
-      .addFields(
-      { name: 'Date du bot ', value: 'Le 2 Octobre 2020', inline: true},
-      { name: 'Fonctionnalité du Bot', value: 'Il sera polyvalent et pourra vous aidez dans plusieurs taches.Pour plus,contactez Kwartz Kreiz#0001', inline: true}
-
+      .addField(
+      { name: 'd!kick', value: '| sert a kick une personne', inline: false}
+      )
+      .addField(
+      { name: 'd!ban', value: '| sert a ban une personne', inline: false}
       )
 
 
