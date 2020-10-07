@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
    .addField("La raison", "```exemple:d!tempmute @... ...d Raconte des choses racistes```")
     .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
     message.channel.send(helpembed)
- 
+    }
     let reason = args.slice(2).join(" ");
     if(!reason) reason = "Aucune raison donnée"
  
