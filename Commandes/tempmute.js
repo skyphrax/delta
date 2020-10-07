@@ -26,7 +26,6 @@ module.exports.run = async (bot, message, args) => {
     }
  
     let muteTime = (args[1]);
-    if(!muteTime) return message.channel.send("Spécifier la durée.")
  
     await mutee.roles.add(muterole.id).then(() => {
         message.delete()
