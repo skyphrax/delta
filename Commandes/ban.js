@@ -5,7 +5,13 @@ module.exports.run = async (client, message, args) => {
  
    let bannedUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
    if(!bannedUser) {
-       return message.channel.send("**Not found.**")
+       let helpembed = new Discord.MessageEmbed()
+   .setDescription("~Ban~")
+   .setColor(colours.red_light)
+   .addField("Mentionnez l'utilisateur ```exemple: d!ban @steve ...```")
+   .addField("La raison ```exemple:d!ban @... menace de ddos```")
+    .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
+    message.channel.send(helpembed)
    }
    let banReason = args.join(" ").slice(22);
    if(!message.member.hasPermission("MANAGE_MESSAGES")) {
