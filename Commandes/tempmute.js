@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
  
     let mutee = message.mentions.members.first() || message.guild.members.cache.get(args[0])
     if(!mutee) {
-       return let helpembed = new Discord.MessageEmbed()
+       const helpembed = new Discord.MessageEmbed()
    .setDescription("~Tempmute~")
    .setColor(colours.red_light)
    .addField("Mentionnez l'utilisateur", "```exemple: d!tempmute @steve ...```")
