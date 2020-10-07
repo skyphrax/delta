@@ -9,14 +9,14 @@ module.exports.run = async (bot, message, args) => {
  
     let mutee = message.mentions.members.first() || message.guild.members.cache.get(args[0])
     if(!mutee) {
-       const helpembed = new Discord.MessageEmbed()
+       let helpembed = new Discord.MessageEmbed()
    .setDescription("~Tempmute~")
    .setColor(colours.red_light)
    .addField("Mentionnez l'utilisateur", "```exemple: d!tempmute @steve ...```")
    .addField("La durée", "```exemple:d!tempmute @... number(s=second,d=days,y=years)```")
    .addField("La raison", "```exemple:d!tempmute @... ...d Raconte des choses racistes```")
-    .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
-    message.channel.send(helpembed)
+   .setFooter(`Tout droit résérvé | DeltaBot © ️ 2020` , client.user.displayAvatarURL)
+    message.channel.send({ embed: helpembed })
     }
     let reason = args.slice(2).join(" ");
     if(!reason) reason = "Aucune raison donnée"
