@@ -8,7 +8,7 @@ module.exports = {
   maxArgs: 1,
   expectedArgs: '<Language>',
   permissions: 'ADMINISTRATOR'
-  callback: (message, arguments) => {
+  callback: async (message, arguments) => {
     const { guild } = message
     
     const targetLanguage = arguments[0].toLowerCase()
