@@ -40,9 +40,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Utilisateur ayant tempmute", message.author.tag)
     .addField("Raison", reason)
  
-    let mutelogChannel = message.guild.channels.find (`nom`,"delta-log");
- 
-   mutelogChannel.send (MuteLogEmbed)
+    message.channel.send(MuteLogEmbed)
  
     setTimeout(() => {
         mutee.roles.remove(muterole.id)
