@@ -23,9 +23,8 @@ module.exports.run = async (client, message, args) => {
    . setTimestamp()
     . setFooter(`Tout droit résérvé | DeltaBot © ️ 2020`,  client.user.displayAvatarURL)
   
-   let kickChannel = message.guild.channels.find (`nom`,"delta-log");
- 
-   kickChannel.send (kickEmbed)
+   const log_channel = clients.channels.cache.get(`nom`, 'delta-log')
+   log_channel.send(kickEmbed)
    message.guild.member(kickedUser).kick(kickReason);
 }
  
