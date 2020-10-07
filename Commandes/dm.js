@@ -10,11 +10,17 @@ let desti = message.mentions.users.first()
 const guild = message.guild;
 
 if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('Vous n\'avez pas la permission d\'utiliser cette commande.')
-if (!desti) return message.channel.send('Veuillez mentionner la personne a dm')
+if (!desti) {
+    let helpembed = new Discord.MessageEmbed()
+   .setDescription("~Tempmute~")
+   .setColor(colours.red_light)
+   .addField("Mentionnez l'utilisateur", "```exemple: d!dm @steve ...```")
+   .addField("La raison", "```exemple:d!dm @... allé dans attente recrutement```")
+    message.channel.send({ embed: helpembed })
+}
 let messageArray = message.content.split(" ");
 let args = messageArray.slice(1);
 let texte = args.join(" ").slice(22);
-if(!texte) return message.reply("Veuillez indiquer un texte à envoyer")
 
 const embed = new Discord.MessageEmbed()
   .setColor(colours.red_light)
