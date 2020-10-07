@@ -9,10 +9,10 @@ if(!perm) return message.channel.send("Tu n'as pas la permission de taper cette 
       .setURL("https://discord.gg/pJnP2pP")
       .setThumbnail(client.user.displayAvatarURL())
       .setImage(client.user.displayAvatarURL())
-      .addField(
+      .addFields(
       { name: 'd!kick', value: '| sert a kick une personne', inline: false}
       )
-      .addField(
+      .addFields(
       { name: 'd!ban', value: '| sert a ban une personne', inline: false}
       )
 
