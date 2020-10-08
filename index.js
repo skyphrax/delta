@@ -67,9 +67,12 @@ fs.readdir("./Events/", (error, f) => {
   })
   
   client.on('messageReactionAdd', async(reaction, user, member) => {
-    let ch = db.get(`welchannel_${member.guild.id}`);
+    let chd = db.get(`welchannel_${member.guild.id}`);
     const message = reaction.message;
     const member = message.guild.members.cache.get(user.id);
+    
+    if(chd === null) {
+    return;
     
     if(user.bot) return;
     if(
