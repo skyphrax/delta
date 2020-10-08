@@ -48,7 +48,7 @@ fs.readdir("./Events/", (error, f) => {
   
   member.guild.channels.cache.get(ch).send(embed)
 
-  })
+  });
   
   client.on("guildMemberAdd", (member) => {
   let ch = db.get(`welchannel_${member.guild.id}`);
@@ -64,4 +64,4 @@ fs.readdir("./Events/", (error, f) => {
   
   member.guild.channels.cache.get(ch).send(embed)
 
-  })
+  });
