@@ -66,6 +66,32 @@ fs.readdir("./Events/", (error, f) => {
 
   })
   
+  client.on('guildCreate', guild =>{
+    const channelId = '763707176573075497';
+    const channel = client.channels.cache.get(channelId); //This Gets That Channel
+    const sowner = guild.owner.user; //This Gets The Guild Owner
+    if(!channel) return; //If the channel is invalid it returns
+    const embed = new Discord.MessageEmbed()
+        .setTitle('Oh une personne a rajouté notre bot!')
+        .setDescription(`**Nom du serveur:** ${guild.name} (${guild.id})\n**Nombre de membres:** ${guild.memberCount}\n**Owner:** ${sowner.tag}`)
+        .setTimestamp()
+        .setColor('RED')
+        .setFooter(`Je suis dans ${client.guilds.cache.size} guildes maintenant!`);
+    channel.send(embed);
+});
   
+  client.on('guildDelete', guild =>{
+    const channelId = '763707176573075497';
+    const channel = client.channels.cache.get(channelId); //This Gets That Channel
+    const sowner = guild.owner.user; //This Gets The Guild Owner
+    if(!channel) return;  //If the channel is invalid it returns
+    const embed = new Discord.MessageEmbed()
+        .setTitle('I Left A Guild!')
+        .setDescription(`**Nom du serveur:** ${guild.name} (${guild.id})\n**Nombre de membres:** ${guild.memberCount}\n**Owner:** ${sowner.tag}`)
+        .setTimestamp()
+        .setColor('RED')
+        .setFooter(`Je suis dans ${client.guilds.cache.size} guildes maintenant!`);
+    channel.send(embed);
+});
   
 })
