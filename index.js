@@ -64,4 +64,4 @@ fs.readdir("./Events/", (error, f) => {
   
   member.guild.channels.cache.get(ch).send(embed)
 
-  };
+  }
