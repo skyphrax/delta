@@ -9,11 +9,13 @@ if(!perm) return message.channel.send("Tu n'as pas la permission de taper cette 
     if (role){
         if (message.member.roles.cache.has(role.id)) return message.channel.send("Vous avez déjà ce role! Essayer a nouveau");
         if (role.permissions.has('KICK_MEMBERS')) return message.channel.send("Vous ne pouvez pas avoir ce role");
-    message.member.roles.add(role)
-    .then(m => let embed = new Discord.MessageEmbed()
+    message.member.roles.add(role).then(m => {
+      let embed = new Discord.MessageEmbed()
                 .addField(`Vous avez donné à la personne le grade ${role}`)
                 .setColor(colours.red_light)
                 .addfooter("Tout droit résérvé | DeltaBot ©")
+       message.channel.send(embed);
+    })
     .catch(e => console.log(e));
 
     }
