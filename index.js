@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-const {PREFIX} = require("./config.js");
+const {TOKEN, PREFIX} = require("./config.js");
 const colours = require("./colours.json");
 const db = require('quick.db')
-client.login(process.env.TOKEN);
+client.login(TOKEN);
 
 client.commands = new Discord.Collection();
 fs.readdir("./Commandes/", (error, f) => {
@@ -48,7 +48,7 @@ fs.readdir("./Events/", (error, f) => {
   
   member.guild.channels.cache.get(ch).send(embed)
 
-  });
+  })
   
   client.on("guildMemberAdd", (member) => {
   let ch = db.get(`welchannel_${member.guild.id}`);
@@ -64,4 +64,8 @@ fs.readdir("./Events/", (error, f) => {
   
   member.guild.channels.cache.get(ch).send(embed)
 
-  }
+  })
+  
+  
+  
+})
