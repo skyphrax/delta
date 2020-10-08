@@ -8,8 +8,7 @@ module.exports.run = async (client, message, args, member) => {
     let chd = db.get(`tickchannel_${member.guild.id}`);
     let OpenTicket = new Discord.MessageEmbed()
     .setDescription('React `📥` for open a ticket')
-    message.channel.send(OpenTicket)
-    .then(msg => msg.react('📥'))
+      member.guild.channels.cache.get(chd).send(OpenTicket).then(msg => msg.react('📥'))
 }
 
 module.exports.help = {
