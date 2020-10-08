@@ -65,26 +65,3 @@ fs.readdir("./Events/", (error, f) => {
   member.guild.channels.cache.get(ch).send(embed)
 
   })
-  
-  client.on('messageReactionAdd', async(reaction, user, member) => {
-    let chd = db.get(`tickchannel_${member.guild.id}`);
-    const message = reaction.message;
-    let memberg = message.guild.members.cache.get(user.id);
-    
-    if(chd === null) {
-    return;
-    
-    if(user.bot) return;
-    if(
-      ["📥"].includes(reaction.emoji.name)
-    ) {
-      switch(reaction.emoji.name) {
-          case "📥":
-          
-          
-          break;
-      }
-    }
-  })
-  
-})
