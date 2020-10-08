@@ -15,7 +15,7 @@ if(!args[0])
     }
     
     
-    db.set(`welchannel_${message.guild.id}`, channel.id)
+    db.set(`tickchannel_${message.guild.id}`, channel.id)
     
   
     message.channel.send(`:white_check_mark: | Le salon de message de ticket est défini sur : ${channel}`)
