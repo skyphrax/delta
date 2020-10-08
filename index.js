@@ -67,7 +67,7 @@ fs.readdir("./Events/", (error, f) => {
   })
   
   client.on('messageReactionAdd', async(reaction, user, member) => {
-    let chd = db.get(`welchannel_${member.guild.id}`);
+    let chd = db.get(`tickchannel_${member.guild.id}`);
     const message = reaction.message;
     const member = message.guild.members.cache.get(user.id);
     
