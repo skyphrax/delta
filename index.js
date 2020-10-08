@@ -67,31 +67,35 @@ fs.readdir("./Events/", (error, f) => {
   })
   
   client.on('guildCreate', guild =>{
-    const channelId = '763707176573075497';
-    const channel = client.channels.cache.get(channelId); //This Gets That Channel
-    const sowner = guild.owner.user; //This Gets The Guild Owner
-    if(!channel) return; //If the channel is invalid it returns
-    const embed = new Discord.MessageEmbed()
-        .setTitle('Oh une personne a rajouté notre bot!')
-        .setDescription(`**Nom du serveur:** ${guild.name} (${guild.id})\n**Nombre de membres:** ${guild.memberCount}\n**Owner:** ${sowner.tag}`)
+    const channel = client.channels.cache.get("763707176573075497") //channel où le message sera mis
+    //console.log(channel)
+    let addembed = new Discord.MessageEmbed()
+        .setTitle(`BOT vient d'être ajouté sur le serveur : ${guild.name}`)
+        .setThumbnail(guild.iconURL())
+        .addField(`👑 Propriétaire:`, `${guild.owner}`)
+        .addField(`📇 Nom du serveur :`, `${guild.name}`)
+        .addField(` Id du serveur:`, `${guild.id}`)
+        .addField(` Nombre de membres:`, `${guild.memberCount}`)
+        .setColor("11d646")
         .setTimestamp()
-        .setColor('RED')
-        .setFooter(`Je suis dans ${client.guilds.cache.size} guildes maintenant!`);
-    channel.send(embed);
+        .setFooter( `Merci grâce à toi nous sommes à ${client.guilds.cache.size} serveurs`, client.user.displayAvatarURL())
+    channel.send(addembed) 
 });
   
   client.on('guildDelete', guild =>{
-    const channelId = '763707176573075497';
-    const channel = client.channels.cache.get(channelId); //This Gets That Channel
-    const sowner = guild.owner.user; //This Gets The Guild Owner
-    if(!channel) return;  //If the channel is invalid it returns
-    const embed = new Discord.MessageEmbed()
-        .setTitle("oh non l'utilisateur la kick!")
-        .setDescription(`**Nom du serveur:** ${guild.name} (${guild.id})\n**Nombre de membres:** ${guild.memberCount}\n**Owner:** ${sowner.tag}`)
-        .setTimestamp()
-        .setColor('RED')
-        .setFooter(`Je suis dans ${client.guilds.cache.size} guildes maintenant!`);
-    channel.send(embed);
+    const channel = client.channels.cache.get("763707176573075497")//channel où le message s'envoi
+    //console.log(channel)
+    let removeembed = new Discord.MessageEmbed()
+        .setTitle(`BOT vient d\'être retiré du serveur serveur ${guild.name}`)
+        .setThumbnail(guild.iconURL())
+        .addField(`👑 Propriétaire:`, `${guild.owner}`)
+        .addField(`📇 Nom du serveur :`, `${guild.name}`)
+        .addField(` Id du serveur:`, `${guild.id}`)
+        .addField(` Nombre de membres:`, `${guild.memberCount}`)
+        .setColor(`fc3d12`)
+        .setFooter( `Désormais : ${client.guilds.cache.size} serveurs`, client.user.displayAvatarURL())
+    channel.send(removeembed)    
+    //console.log(channel)
 });
   
 })
