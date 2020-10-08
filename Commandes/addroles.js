@@ -1,4 +1,4 @@
-const Discord.js = require('discord.js')
+const Discord = require ("discord.js");
 
 module.exports.run = (client,message, args) => {
   let perm = message.member.hasPermission('MANAGE_ROLES');
