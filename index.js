@@ -86,7 +86,7 @@ fs.readdir("./Events/", (error, f) => {
     const sowner = guild.owner.user; //This Gets The Guild Owner
     if(!channel) return;  //If the channel is invalid it returns
     const embed = new Discord.MessageEmbed()
-        .setTitle('I Left A Guild!')
+        .setTitle('oh non l'utilisateur la kick!')
         .setDescription(`**Nom du serveur:** ${guild.name} (${guild.id})\n**Nombre de membres:** ${guild.memberCount}\n**Owner:** ${sowner.tag}`)
         .setTimestamp()
         .setColor('RED')
