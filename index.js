@@ -66,6 +66,21 @@ fs.readdir("./Events/", (error, f) => {
 
   })
   
-  
+  client.on('messageReactionAdd', async(reaction, user) => {
+    const message = reaction.message;
+    const member = message.guild.members.cache.get(user.id);
+    
+    if(user.bot) return;
+    if(
+      ["📥"].includes(reaction.emoji.name)
+    ) {
+      switch(reaction.emoji.name) {
+          case "📥":
+          
+          
+          break;
+      }
+    }
+  })
   
 })
