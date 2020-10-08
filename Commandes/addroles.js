@@ -1,4 +1,6 @@
 const Discord = require ("discord.js");
+const {PREFIX} = require("../config.js");
+const colours = require("../colours.json")
 
 module.exports.run = (client,message, args) => {
   let perm = message.member.hasPermission('MANAGE_ROLES');
@@ -9,6 +11,9 @@ if(!perm) return message.channel.send("Tu n'as pas la permission de taper cette 
         if (role.permissions.has('KICK_MEMBERS')) return message.channel.send("Vous ne pouvez pas avoir ce role");
     message.member.roles.add(role)
     .then(m => let embed = new Discord.MessageEmbed()
+                .addField(`Vous avez donné à la personne le grade ${role}`)
+                .setColor(colours.red_light)
+                .addfooter("Tout droit résérvé | DeltaBot ©")
     .catch(e => console.log(e));
 
     }
